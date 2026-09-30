@@ -1,0 +1,19 @@
+# Materiais locais de aula e referência
+_AULA1/
+Docs-Ref/
+
+# Cache e bytecode Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Variáveis de ambiente e configurações locais
+.env
+.env.*
+config/
+
+# Certificados e chaves
+*.pem
+*.key
+*.p12
+*.pfx

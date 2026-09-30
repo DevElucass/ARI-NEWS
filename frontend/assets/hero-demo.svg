@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 560" role="img" aria-label="Composição abstrata monocromática">
+  <rect width="1600" height="560" fill="#FFFFFF"/>
+  <path d="M80 450C310 150 490 520 725 220S1130 70 1510 300" fill="none" stroke="#0D0D0D" stroke-width="7"/>
+  <path d="M40 150C290 370 530 70 780 345S1230 440 1560 130" fill="none" stroke="#555555" stroke-width="2"/>
+  <g fill="#F9F9F9" stroke="#555555" stroke-width="2">
+    <rect x="210" y="168" width="118" height="118" transform="rotate(25 269 227)"/>
+    <rect x="680" y="282" width="144" height="144" transform="rotate(-18 752 354)"/>
+    <rect x="1190" y="130" width="132" height="132" transform="rotate(40 1256 196)"/>
+  </g>
+  <g fill="#0D0D0D">
+    <circle cx="420" cy="348" r="10"/><circle cx="590" cy="172" r="8"/><circle cx="1010" cy="326" r="12"/><circle cx="1390" cy="368" r="9"/>
+  </g>
+</svg>

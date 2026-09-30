@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ARI NEWS — Inteligência de Negócios</title>
+  <style>
+    :root { color: #0D0D0D; background: #FFFFFF; font-family: Inter, Arial, Helvetica, sans-serif; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #FFFFFF; color: #0D0D0D; line-height: 1.7; }
+    main { max-width: 1120px; margin: 0 auto; padding: 32px 24px 64px; }
+    header { margin-bottom: 28px; }
+    h1 { margin: 0; font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1; letter-spacing: -0.05em; }
+    .subtitle, .muted { color: #555555; }
+    .subtitle { margin: 10px 0 0; font-size: 1rem; }
+    .panel { background: #F9F9F9; padding: 20px; margin-bottom: 28px; }
+    form { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; align-items: end; }
+    label { display: grid; gap: 6px; font-size: .78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+    input, select, button { width: 100%; min-height: 44px; border: 1px solid #0D0D0D; border-radius: 0; background: #FFFFFF; color: #0D0D0D; font: inherit; padding: 8px 10px; }
+    button { background: #0D0D0D; color: #FFFFFF; cursor: pointer; font-weight: 700; }
+    button:hover, button:focus-visible { background: #555555; }
+    .hero { display: block; width: 100%; height: auto; margin-bottom: 18px; background: #F9F9F9; }
+    .context { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 24px; }
+    .tag { display: inline-block; padding: 4px 8px; background: #0D0D0D; color: #FFFFFF; font-size: .74rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .tag--light { background: #F9F9F9; color: #0D0D0D; border: 1px solid #0D0D0D; }
+    .notice, .error { padding: 12px 14px; margin: 0 0 18px; background: #F9F9F9; color: #555555; }
+    .error { color: #0D0D0D; border-left: 4px solid #0D0D0D; }
+    .feed { display: grid; gap: 0; }
+    article { padding: 32px; background: #FFFFFF; }
+    article:nth-child(even) { background: #F9F9F9; }
+    .index { margin: 0 0 16px; color: #555555; font-size: .78rem; font-weight: 700; letter-spacing: .08em; }
+    h2 { margin: 0; font-size: clamp(1.35rem, 3vw, 2.1rem); line-height: 1.2; }
+    .metadata { margin: 10px 0 18px; color: #555555; font-size: .9rem; }
+    .links { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 22px; }
+    a { color: #0D0D0D; font-weight: 700; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    @media (max-width: 760px) { main { padding: 22px 16px 40px; } form { grid-template-columns: 1fr; } article { padding: 24px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>ARI NEWS</h1>
+      <p class="subtitle">Inteligência de Negócios</p>
+    </header>
+
+    <section class="panel" aria-label="Filtros de notícias">
+      <form id="news-form">
+        <label>Setor <input id="sector" name="sector" value="Tecnologia" required></label>
+        <label>Região <input id="region" name="region" value="Brasil" required></label>
+        <label>Data <input id="news-date" name="date" type="date" value="2025-01-01" required></label>
+        <label>Modo
+          <select id="mode" name="mode"><option value="demo">DEMO</option><option value="realtime">TEMPO REAL</option></select>
+        </label>
+        <button type="submit">Atualizar painel</button>
+      </form>
+    </section>
+
+    <img class="hero" id="hero" src="/assets/hero-demo.svg" alt="Composição abstrata monocromática sobre inovação e negócios">
+    <section class="context" id="context" aria-label="Contexto da busca"></section>
+    <p class="notice" id="notice">Dados demonstrativos locais: não representam notícias atuais nem busca em tempo real.</p>
+    <p class="error" id="error" hidden></p>
+    <section class="feed" id="feed" aria-live="polite"></section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
